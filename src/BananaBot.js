@@ -10,7 +10,7 @@ import { saveConfig } from './utils/config.js';
 import { BoneCollector } from './modules/BoneCollector.js';
 import { GuiManager } from './modules/GuiManager.js';
 import { AutoSell } from './modules/AutoSell.js';
-import { plugin as autoEat } from 'mineflayer-auto-eat';
+import autoEat from 'mineflayer-auto-eat';
 
 export class BananaBot {
     constructor(config) {
