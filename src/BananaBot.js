@@ -10,7 +10,6 @@ import { saveConfig } from './utils/config.js';
 import { BoneCollector } from './modules/BoneCollector.js';
 import { GuiManager } from './modules/GuiManager.js';
 import { AutoSell } from './modules/AutoSell.js';
-import autoEat from 'mineflayer-auto-eat';
 
 export class BananaBot {
     constructor(config) {
@@ -55,9 +54,6 @@ export class BananaBot {
             physicsEnabled: true
         });
 
-        // Fix for different import types
-        const eatPlugin = autoEat.plugin || autoEat.default || autoEat;
-        this.bot.loadPlugin(eatPlugin);
 
         this.setupEvents();
         this.initModules();
@@ -79,15 +75,6 @@ export class BananaBot {
 
         this.bot.once('spawn', () => {
             this.boneCollector.init();
-            // Auto Eat initialization
-            if (this.bot.autoEat) {
-                this.bot.autoEat.options = {
-                    priority: 'foodPoints',
-                    startAt: 14, // Eat when hunger < 14
-                    bannedFood: [] // Add banned foods here if needed
-                };
-                Logger.system('🍖 Auto-Eat: ACTIVE');
-            }
         });
     }
 
