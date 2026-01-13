@@ -55,7 +55,9 @@ export class BananaBot {
             physicsEnabled: true
         });
 
-        this.bot.loadPlugin(autoEat.default || autoEat);
+        // Fix for different import types
+        const eatPlugin = autoEat.plugin || autoEat.default || autoEat;
+        this.bot.loadPlugin(eatPlugin);
 
         this.setupEvents();
         this.initModules();
