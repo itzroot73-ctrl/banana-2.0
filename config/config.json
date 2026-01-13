@@ -31,11 +31,5 @@
         "enabled": false,
         "command": "/sell all",
         "interval": 300000
-    },
-    "autoEat": {
-        "enabled": true,
-        "priority": "foodPoints",
-        "startAt": 14,
-        "bannedFood": []
     }
 }
