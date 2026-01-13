@@ -1,0 +1,41 @@
+{
+    "host": "play.bananasmp.net",
+    "port": 25565,
+    "username": "testbanana",
+    "version": "1.20.1",
+    "auth": "offline",
+    "autoReconnect": true,
+    "reconnectDelay": 5000,
+    "colors": {
+        "theme": "green"
+    },
+    "aliases": {
+        "!c": "!click 15",
+        "!h": "Hi"
+    },
+    "boneCollector": {
+        "spawnerPos": {
+            "x": 754,
+            "y": 25,
+            "z": -13636
+        },
+        "chestPos": {
+            "x": 748,
+            "y": 26,
+            "z": -13636
+        },
+        "collectSlot": 13,
+        "cycleDelay": 5000
+    },
+    "autoSell": {
+        "enabled": false,
+        "command": "/sell all",
+        "interval": 300000
+    },
+    "autoEat": {
+        "enabled": true,
+        "priority": "foodPoints",
+        "startAt": 14,
+        "bannedFood": []
+    }
+}
